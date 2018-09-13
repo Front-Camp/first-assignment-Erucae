@@ -8,6 +8,13 @@
 */
 const max = arr => {
   /* your logic here...*/
+  return arr.reduce((accum, currentval)=> {
+      if(isFinite(currentval) && currentval > accum){
+          return currentval;
+      }
+      return accum;
+      
+  },0)
 };
 
 export default max;
